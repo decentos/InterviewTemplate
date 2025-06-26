@@ -2,7 +2,6 @@ package interview.loadbalancer;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -28,7 +27,7 @@ class LoadBalancerTest {
     }
 
     @Test
-    void shouldNotRegisterSameAddressTeice() {
+    void shouldNotRegisterSameAddressTwice() {
         assertTrue(underTest.register("a1"));
         assertFalse(underTest.register("a1"));
         assertEquals(1, underTest.getAllAddresses().size());
