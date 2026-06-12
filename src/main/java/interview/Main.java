@@ -2,9 +2,10 @@ package interview;
 
 public class Main {
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        int result = solution.add(2, 3);
+        ParkingGarageService parkingGarageService = new ParkingGarageService();
+        parkingGarageService.addParkingSpot("C1", SpotType.COMPACT);
+        String spotNumber = parkingGarageService.parkVehicle("ABC-123", SpotType.COMPACT);
 
-        System.out.println("Result: " + result);
+        System.out.println("Parked at: " + spotNumber);
     }
 }
