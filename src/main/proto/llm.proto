@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package interview.llm;
+
+option java_multiple_files = true;
+option java_package = "interview.llm.grpc";
+option java_outer_classname = "LlmProto";
+
+service LlmService {
+  rpc Ask(AskRequest) returns (AskResponse);
+}
+
+message AskRequest {
+  string user_id = 1;
+  string question = 2;
+}
+
+message AskResponse {
+  string answer = 1;
+}
