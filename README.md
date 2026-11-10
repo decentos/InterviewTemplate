@@ -1,6 +1,6 @@
 # InterviewTemplate
 
-Small Java 21 template for live coding interviews.
+Small Java 25 template for live coding interviews.
 
 The project is intentionally plain Java: no Spring, no configuration files, no
 test doubles framework by default. It is meant to be opened in IntelliJ and used
@@ -8,8 +8,11 @@ as a fast starting point for TDD-style mini projects or algorithmic tasks.
 
 ## Requirements
 
-- JDK 21 or newer
+- JDK 25 or newer
 - Maven 3.9+
+
+Run `mvn -v` to check which JDK Maven is using. If it reports an older Java
+version, set `JAVA_HOME` to your JDK 25 installation before building.
 
 ## Current Structure
 
